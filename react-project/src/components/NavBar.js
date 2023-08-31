@@ -1,22 +1,27 @@
 import React from 'react';
-import CartWidget from './CartWidget'; // Importa el componente CartWidget
+import { Link } from 'react-router-dom';
+import './navbarStyles.css'; // Importa los estilos personalizados
+import CartWidget from './CartWidget';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar">
       <div className="container">
-        <a className="navbar-brand" href="#">Mi Tienda</a>
+        <Link className="navbar-brand" to="/">Mi Tienda</Link>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <a className="nav-link" href="#">Categoría 1</a>
+            <Link className="navbar-link" to="/category/1">Categoría 1</Link>
           </li>
           {/* Agrega más categorías aquí */}
         </ul>
-        <CartWidget /> {/* Agrega el componente CartWidget aquí */}
+        <CartWidget />
       </div>
     </nav>
   );
 };
 
 export default Navbar;
+
+
+

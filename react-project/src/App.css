@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+.navbar {
+  background-color: #333;
+  color: white;
+}
+
+.success-message {
+  display: inline-block;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.message-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.message-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.message-exit {
+  opacity: 1;
+}
+
+.message-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+

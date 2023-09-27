@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, BrowserRouter, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
         <NavBar cartItems={cartItems} /> {/* Pasa el estado del carrito al NavBar */}
         <CSSTransition
@@ -27,16 +27,16 @@ function App() {
         >
           <div className="success-message">¡Producto agregado al carrito!</div>
         </CSSTransition>
-        <Switch>
+        <Routes>
           {/* Pasa la función addToCart como prop al ItemListContainer */}
-          <Route path="/" exact>
+          <Route path="/">
             <ItemListContainer addToCart={addToCart} />
           </Route>
           <Route path="/category/:id" component={ItemListContainer} />
           <Route path="/item/:id" component={ItemDetailContainer} />
-        </Switch>
+        </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importa los estilos de Bootstrap
-import { useCart } from './CartContext'; // Importa el contexto CartContext
+import { useCart } from '../../CartContext';
 
 const CartWidget = () => {
   const { cartItems } = useCart(); // Obtiene los elementos del carrito desde el contexto

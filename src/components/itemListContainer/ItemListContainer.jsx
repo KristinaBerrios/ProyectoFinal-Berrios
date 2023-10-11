@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
-import { useCart } from './CartContext';
+import { useCart } from '../../CartContext';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 

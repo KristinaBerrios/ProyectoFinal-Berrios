@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
-import { CartProvider, useCart } from './CartContext'; // Importa el contexto CartContext
+import { useCart } from '../../CartContext';
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState(null);

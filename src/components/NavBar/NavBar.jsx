@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbarStyles.css'; // Importa los estilos personalizados
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useCart } from './CartContext'; // Importa el contexto CartContext
-import CartWidget from '../CardWidget/CartWidget';
+import { useCart } from '../../CartContext';
+import CartWidget from '../CartWidget/CartWidget';
 
 const Navbar = () => {
   const { cartItems } = useCart(); // Obtiene los elementos del carrito desde el contexto
